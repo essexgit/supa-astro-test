@@ -15,9 +15,9 @@ const { pageTitle } = Astro.props;
     <title>{pageTitle}</title>
     <ViewTransitions />
   </head>
-  <body transition:animate={fade({ duration: "0.8s" })}>
+  <body>
     <Header />
-    <h1 transition:animate={slide({ duration: "0.8s" })}>
+    <h1 transition:animate="slide">
       {pageTitle}
     </h1>
     <slot />
