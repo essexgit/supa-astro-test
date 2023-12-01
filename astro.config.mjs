@@ -7,6 +7,8 @@ import netlify from "@astrojs/netlify/functions";
 export default defineConfig({
   site: "https://remarkable-fairy-a9040b.netlify.app/",
   integrations: [preact()],
-  output: "hybrid",
-  adapter: netlify()
+  output: "server",
+  adapter: netlify({
+    edgeMiddleware: true
+  }),
 });
